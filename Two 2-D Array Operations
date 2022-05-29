@@ -73,3 +73,81 @@ int sum(int a[2][3],int b[2][3])
 
     
 
+
+
+
+#include <stdio.h>
+void display(int a[2][3]);
+void sum(int a[2][3], int b[2][3]);
+void main()
+{
+    int a[2][3],b[2][3];
+    int i,j,c;
+    
+    for(i=0;i<2;i++)
+    {
+        printf("enter elements for %d row:",i);
+        printf("\n");
+        printf("\n");
+        for(j=0;j<3;j++)
+        {
+            printf("enter elements for %d column:",j);
+            scanf("%d",&a[i][j]);
+        }
+        printf("\n");
+    }
+    for(i=0;i<2;i++)
+    {
+        printf("enter elements for %d row:",i);
+        printf("\n");
+        printf("\n");
+        for(j=0;j<3;j++)
+        {
+            printf("enter elements for %d column:",j);
+            scanf("%d",&b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    printf("the matrix a is:\n");
+    display(a);
+    
+    printf("the matrix b is:\n");
+    display(b);
+    
+    printf("the matrix c is:\n");
+    sum(a,b);
+}
+
+void display(int a[2][3])
+{
+    int i,j;
+    
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            
+            printf("%d ",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+void sum(int a[2][3],int b[2][3])
+{
+    int s[2][3],i,j,k;
+    for(i=0;i<2;i++)
+    {
+        for(j=0;j<3;j++)
+        {
+            s[i][j]=a[i][j]+b[i][j];
+            printf("%d ",s[i][j]);
+        }
+        printf("\n");
+    }
+    
+}
+
+
