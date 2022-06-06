@@ -196,7 +196,7 @@ void main()
                 f[j]= visited;
             }
         }
-        if(a[i]!=visited)
+        if(f[i]!=visited)
         {
             f[i]=count;
         }
