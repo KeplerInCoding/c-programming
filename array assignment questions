@@ -165,7 +165,7 @@ int sum(int a[2][3],int b[2][3])
 
 
 
-//FREQUENCY OF ELEMENTS OF 1-D ARRAY. //not working properly
+//FREQUENCY OF ELEMENTS OF 1-D ARRAY
 
 #include <stdio.h>
 void main()
