@@ -1,0 +1,17 @@
+void sendarr(int [],int);
+void main() 
+{
+int a[5]={4,5,3,2,6};
+int i,n=5;
+
+printf("%d\t", *(a+3));
+sendarr(a,n); 
+}
+
+void sendarr(int a[],int n)
+{
+ int i;
+ for(i=0;i<5;i++)
+     printf("%d\t", *(a+i));
+
+}
