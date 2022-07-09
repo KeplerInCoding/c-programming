@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+
+void main()
+{
+int *aptr,n,i,m;
+printf("how many number you want=");
+scanf("%d",&n);
+aptr=(int *) malloc(n*sizeof(int));
+if(aptr==NULL)
+{
+printf("memory not avialable\n");
+exit(0);
+}
+printf("enter the element");
+for(i=0;i<n;i++)
+{
+scanf("%d",(aptr+i));
+}
+printf("\n Array elements are below\n");
+for(i=0;i<n;i++)
+{
+printf("\n%3d",*(aptr+i));
+printf("\t%3d",aptr+i); 
+}
+printf("\n how many more element you wat to store =");
+scanf("%d",&m);
+aptr=(int *)realloc(aptr,m*sizeof(int));
+if(aptr==NULL) 
+{
+printf("memory not avialable\n");
+exit(1); 
+}
+printf("printf enter %d more elements\n",m) ;
+for(i=n;i<n+m;i++)
+scanf("%d",(aptr+i));
+printf("\n Elements are below\n\n");
+for(i=0;i<n+m;i++)
+{
+printf("%3d",*(aptr+i)); 
+}
+}
