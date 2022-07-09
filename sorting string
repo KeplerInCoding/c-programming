@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+
+int main (void)
+{
+     char str[20];
+     char key;
+     int len;
+     int i, j;
+
+     //Input string
+     printf ("Input String: ");
+     gets (str);
+
+     //Sorting
+     len = strlen (str);
+     for (i = 1; i <= len - 1; i++)
+     {
+          key = str[i];
+          for (j = i - 1; j >= 0 && str[j] > key; j--)
+               str[j + 1] = str[j];
+          str[j + 1] = key;
+     }
+
+     //Print new string after sorting
+     printf ("New string after sorting: %s", str);
+
+     return 0;
+};
