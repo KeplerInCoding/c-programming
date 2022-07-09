@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+void main()
+{
+    int n, a, b;
+    scanf("%d %d", &a, &b);
+
+    n= a<b?a:b;
+
+    while(n)
+    {
+        if(a%n==0 && b%n==0)
+        {
+            printf("%d",n);
+            break;
+        }
+            
+        else
+        {
+            n=n-1;
+        }     
+    }
+}
+
+
+
+
+
+
+#include <stdio.h>
+#include <math.h>
+
+void main()
+{
+    int a, b, c, d, temp;
+    scanf("%d%d", &a,&b);
+
+    c=fmin(a,b);
+    d=fmax(a,b);
+
+    while(d%c!=0)
+    {
+        temp= c;
+        c=d-c;
+        d=temp;
+        if(c>d)
+        {
+            c=c+d;
+            d=c-d;
+            c=c-d;
+        }
+        
+        
+    }
+    printf("%d",c);
+}
